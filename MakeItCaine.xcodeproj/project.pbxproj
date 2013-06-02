@@ -24,6 +24,11 @@
 		D46DDB26175851EF0090F380 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46DDAFE175851EF0090F380 /* Foundation.framework */; };
 		D46DDB2E175851EF0090F380 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D46DDB2C175851EF0090F380 /* InfoPlist.strings */; };
 		D46DDB31175851EF0090F380 /* MakeItCaineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D46DDB30175851EF0090F380 /* MakeItCaineTests.m */; };
+		D46DDB3D175852B60090F380 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46DDB3C175852B60090F380 /* AudioToolbox.framework */; };
+		D46DDB3F175855A20090F380 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46DDB3E175855A20090F380 /* AVFoundation.framework */; };
+		D46DDB451758DEB80090F380 /* makeitcaine.wav in Resources */ = {isa = PBXBuildFile; fileRef = D46DDB441758DEB80090F380 /* makeitcaine.wav */; };
+		D46DDB471759819B0090F380 /* caruso3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D46DDB461759819B0090F380 /* caruso3.jpg */; };
+		D46DDB491759868A0090F380 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46DDB481759868A0090F380 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,12 @@
 		D46DDB2D175851EF0090F380 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D46DDB2F175851EF0090F380 /* MakeItCaineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeItCaineTests.h; sourceTree = "<group>"; };
 		D46DDB30175851EF0090F380 /* MakeItCaineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeItCaineTests.m; sourceTree = "<group>"; };
+		D46DDB3C175852B60090F380 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D46DDB3E175855A20090F380 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D46DDB441758DEB80090F380 /* makeitcaine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = makeitcaine.wav; sourceTree = "<group>"; };
+		D46DDB461759819B0090F380 /* caruso3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caruso3.jpg; sourceTree = "<group>"; };
+		D46DDB481759868A0090F380 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		D46DDB9C175AB0CF0090F380 /* MakeItCaine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MakeItCaine.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46DDB491759868A0090F380 /* iAd.framework in Frameworks */,
+				D46DDB3F175855A20090F380 /* AVFoundation.framework in Frameworks */,
+				D46DDB3D175852B60090F380 /* AudioToolbox.framework in Frameworks */,
 				D46DDAFD175851EF0090F380 /* UIKit.framework in Frameworks */,
 				D46DDAFF175851EF0090F380 /* Foundation.framework in Frameworks */,
 				D46DDB01175851EF0090F380 /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +122,9 @@
 		D46DDAFB175851EF0090F380 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D46DDB481759868A0090F380 /* iAd.framework */,
+				D46DDB3E175855A20090F380 /* AVFoundation.framework */,
+				D46DDB3C175852B60090F380 /* AudioToolbox.framework */,
 				D46DDAFC175851EF0090F380 /* UIKit.framework */,
 				D46DDAFE175851EF0090F380 /* Foundation.framework */,
 				D46DDB00175851EF0090F380 /* CoreGraphics.framework */,
@@ -119,6 +136,7 @@
 		D46DDB02175851EF0090F380 /* MakeItCaine */ = {
 			isa = PBXGroup;
 			children = (
+				D46DDB9C175AB0CF0090F380 /* MakeItCaine.entitlements */,
 				D46DDB0B175851EF0090F380 /* AppDelegate.h */,
 				D46DDB0C175851EF0090F380 /* AppDelegate.m */,
 				D46DDB14175851EF0090F380 /* MainStoryboard_iPhone.storyboard */,
@@ -133,6 +151,8 @@
 		D46DDB03175851EF0090F380 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D46DDB461759819B0090F380 /* caruso3.jpg */,
+				D46DDB441758DEB80090F380 /* makeitcaine.wav */,
 				D46DDB04175851EF0090F380 /* MakeItCaine-Info.plist */,
 				D46DDB05175851EF0090F380 /* InfoPlist.strings */,
 				D46DDB08175851EF0090F380 /* main.m */,
@@ -240,6 +260,8 @@
 				D46DDB13175851EF0090F380 /* Default-568h@2x.png in Resources */,
 				D46DDB16175851EF0090F380 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D46DDB19175851EF0090F380 /* MainStoryboard_iPad.storyboard in Resources */,
+				D46DDB451758DEB80090F380 /* makeitcaine.wav in Resources */,
+				D46DDB471759819B0090F380 /* caruso3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +421,8 @@
 				GCC_PREFIX_HEADER = "MakeItCaine/MakeItCaine-Prefix.pch";
 				INFOPLIST_FILE = "MakeItCaine/MakeItCaine-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,6 +434,8 @@
 				GCC_PREFIX_HEADER = "MakeItCaine/MakeItCaine-Prefix.pch";
 				INFOPLIST_FILE = "MakeItCaine/MakeItCaine-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -467,6 +493,7 @@
 				D46DDB36175851EF0090F380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D46DDB37175851EF0090F380 /* Build configuration list for PBXNativeTarget "MakeItCaineTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +502,7 @@
 				D46DDB39175851EF0090F380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
