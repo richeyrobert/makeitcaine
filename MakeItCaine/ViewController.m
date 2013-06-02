@@ -14,11 +14,14 @@
 @end
 
 @implementation ViewController
-
+//@synthesize IsPlaying = _IsPlaying;
+@synthesize PlayingSoundID;
+BOOL *_IsPlaying = false;
 - (void)viewDidLoad
 {
         [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    _IsPlaying = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,13 +31,25 @@
 }
   
 - (IBAction)playSound:(id)sender {
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundFileURLRef;
-    soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"makeitcaine", CFSTR ("wav"), NULL);
+    if (_IsPlaying == false) {
+        _IsPlaying = true;
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef soundFileURLRef;
+        soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"makeitcaine", CFSTR ("wav"), NULL);
+        
+        UInt32 soundID;
+        AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
+        AudioServicesAddSystemSoundCompletion (soundID,NULL,NULL,SoundCompletionProc, nil);
+        AudioServicesPlaySystemSound(soundID);
+        PlayingSoundID = soundID;
+        // attempt to set the IsPlaying variable back to false when the music is done playing
+        
+    }
+    else {
+        AudioServicesDisposeSystemSoundID(PlayingSoundID);
+        _IsPlaying = false;
+    }
     
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
 }
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
     [UIView beginAnimations:nil context:NULL];
@@ -50,4 +65,8 @@
     [UIView commitAnimations];
 }
 
+void SoundCompletionProc (SystemSoundID  ssID, void *data ) {
+    
+    _IsPlaying = false;
+}
 @end
