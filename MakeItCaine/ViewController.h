@@ -17,5 +17,8 @@
 
 - (IBAction)playSound:(id)sender;
 
+@property (nonatomic) UInt32 PlayingSoundID;
+extern BOOL *_IsPlaying;
 
+void SoundCompletionProc (SystemSoundID ssID, void *clientData );
 @end
