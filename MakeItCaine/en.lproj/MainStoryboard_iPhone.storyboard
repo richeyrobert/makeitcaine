@@ -53,6 +53,9 @@
                             <constraint firstItem="JMM-rL-2Gr" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="td1-rA-hWj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="caineButton" destination="769-Tf-5h1" id="k3l-6G-2Nn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,6 +72,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="playSound:"/>
+                <relationship kind="outlet" name="caineButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

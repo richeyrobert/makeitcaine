@@ -16,9 +16,11 @@
 }
 
 - (IBAction)playSound:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *caineButton;
 
 @property (nonatomic) UInt32 PlayingSoundID;
-extern BOOL *_IsPlaying;
+extern BOOL _IsPlaying;
 
 void SoundCompletionProc (SystemSoundID ssID, void *clientData );
+void changeButtonColor(UIButton *button, UIColor *newColor);
 @end

@@ -16,7 +16,9 @@
 @implementation ViewController
 //@synthesize IsPlaying = _IsPlaying;
 @synthesize PlayingSoundID;
-BOOL *_IsPlaying = false;
+@synthesize caineButton;
+
+BOOL _IsPlaying = false;
 - (void)viewDidLoad
 {
         [super viewDidLoad];
@@ -39,15 +41,20 @@ BOOL *_IsPlaying = false;
         
         UInt32 soundID;
         AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
-        AudioServicesAddSystemSoundCompletion (soundID,NULL,NULL,SoundCompletionProc, nil);
+        AudioServicesAddSystemSoundCompletion (soundID,NULL,NULL,SoundCompletionProc, (__bridge void *)(self.caineButton));
         AudioServicesPlaySystemSound(soundID);
         PlayingSoundID = soundID;
-        // attempt to set the IsPlaying variable back to false when the music is done playing
-        
+        //Change button color
+        UIButton *button = (UIButton *)sender;
+        [self performSelector:@selector(doHighlight:) withObject:sender afterDelay:0];
+        NSString * myTitle = @"Making it Caine!";
+        [button setTitle:myTitle forState:UIControlStateNormal];
     }
     else {
         AudioServicesDisposeSystemSoundID(PlayingSoundID);
         _IsPlaying = false;
+        [caineButton setHighlighted:false];
+        [caineButton setTitle:@"Make it Caine!" forState:UIControlStateNormal];
     }
     
 }
@@ -65,8 +72,19 @@ BOOL *_IsPlaying = false;
     [UIView commitAnimations];
 }
 
-void SoundCompletionProc (SystemSoundID  ssID, void *data ) {
+- (void)doHighlight:(UIButton*)b {
+    [b setHighlighted:YES];
+}
+
+void SoundCompletionProc (SystemSoundID  ssID, void *button ) {
     
     _IsPlaying = false;
+    //try to change back the title of the button here.
+    UIButton *mybutton = (__bridge UIButton *)(button);
+    [mybutton setHighlighted:false];
+    [mybutton setTitle:@"Make it Caine!" forState:UIControlStateNormal];
+
 }
+
+
 @end

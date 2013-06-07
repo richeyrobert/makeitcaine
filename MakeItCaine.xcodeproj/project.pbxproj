@@ -29,6 +29,8 @@
 		D46DDB451758DEB80090F380 /* makeitcaine.wav in Resources */ = {isa = PBXBuildFile; fileRef = D46DDB441758DEB80090F380 /* makeitcaine.wav */; };
 		D46DDB471759819B0090F380 /* caruso3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D46DDB461759819B0090F380 /* caruso3.jpg */; };
 		D46DDB491759868A0090F380 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46DDB481759868A0090F380 /* iAd.framework */; };
+		D46DDB9E17618B2B0090F380 /* iPhoneIcon_Small (1).png in Resources */ = {isa = PBXBuildFile; fileRef = D46DDB9D17618B2B0090F380 /* iPhoneIcon_Small (1).png */; };
+		D46DDBA017618B880090F380 /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = D46DDB9F17618B880090F380 /* iPhoneIcon_Big (1).png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		D46DDB461759819B0090F380 /* caruso3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caruso3.jpg; sourceTree = "<group>"; };
 		D46DDB481759868A0090F380 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		D46DDB9C175AB0CF0090F380 /* MakeItCaine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MakeItCaine.entitlements; sourceTree = "<group>"; };
+		D46DDB9D17618B2B0090F380 /* iPhoneIcon_Small (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Small (1).png"; sourceTree = "<group>"; };
+		D46DDB9F17618B880090F380 /* iPhoneIcon_Big (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Big (1).png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		D46DDAF0175851EF0090F380 = {
 			isa = PBXGroup;
 			children = (
+				D46DDB9F17618B880090F380 /* iPhoneIcon_Big (1).png */,
+				D46DDB9D17618B2B0090F380 /* iPhoneIcon_Small (1).png */,
 				D46DDB02175851EF0090F380 /* MakeItCaine */,
 				D46DDB29175851EF0090F380 /* MakeItCaineTests */,
 				D46DDAFB175851EF0090F380 /* Frameworks */,
@@ -262,6 +268,8 @@
 				D46DDB19175851EF0090F380 /* MainStoryboard_iPad.storyboard in Resources */,
 				D46DDB451758DEB80090F380 /* makeitcaine.wav in Resources */,
 				D46DDB471759819B0090F380 /* caruso3.jpg in Resources */,
+				D46DDB9E17618B2B0090F380 /* iPhoneIcon_Small (1).png in Resources */,
+				D46DDBA017618B880090F380 /* iPhoneIcon_Big (1).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
